@@ -462,8 +462,8 @@ body.section-show .transition-mask:before{
 }
 
 .front-person-img{
-	width:500px;
-	height:500px;
+	width:100px;
+	height:100px;
 	overflow:hidden;
 	background:#F0F0F0;
 	position:relative;
@@ -481,7 +481,7 @@ body.section-show .transition-mask:before{
 	border-radius:0;
 }
 .front-person-img > img{
-	max-width:500%;
+	max-width:100%;
 	vertical-align:bottom;
 	-webkit-transform:rotate(-45deg) translateY(40px);
 	-moz-transform:rotate(-45deg) translateY(40px);
