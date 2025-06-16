@@ -468,6 +468,7 @@ body.section-show .transition-mask:before{
     overflow: hidden;
     background: #F0F0F0;
     position: relative;
+    transform: rotate(45deg);
     border-radius: 20px;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
