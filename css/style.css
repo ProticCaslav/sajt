@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6,
 	background:#888;
 }
 img{
-	max-width:300%;
+	max-width:100%;
 }
 .parallax{
 	background-size:cover;
@@ -462,8 +462,8 @@ body.section-show .transition-mask:before{
 }
 
 .front-person-img{
-	width:100px;
-	height:100px;
+	width:500px;
+	height:500px;
 	overflow:hidden;
 	background:#F0F0F0;
 	position:relative;
@@ -481,7 +481,7 @@ body.section-show .transition-mask:before{
 	border-radius:0;
 }
 .front-person-img > img{
-	max-width:100%;
+	max-width:500%;
 	vertical-align:bottom;
 	-webkit-transform:rotate(-45deg) translateY(40px);
 	-moz-transform:rotate(-45deg) translateY(40px);
