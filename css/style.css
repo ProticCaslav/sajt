@@ -462,8 +462,8 @@ body.section-show .transition-mask:before{
 }
 
 .front-person-img {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     margin: 150px auto;
     overflow: hidden;
     background: #F0F0F0;
