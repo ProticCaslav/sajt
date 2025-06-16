@@ -663,7 +663,44 @@
 		<script src='js/smoothscroll.js' ></script>
 		<script src='js/script.js' ></script>
 		
-		
+		<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Pratimo sve linkove sa data-section atributom
+    document.querySelectorAll('[data-section]').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const section = this.getAttribute('data-section');
+            history.pushState({ section: section }, '', '#' + section);
+            showSection(section);
+        });
+    });
+
+    // Funkcija koja prikazuje sekciju (možeš je prilagoditi svom načinu prikaza)
+    function showSection(sectionId) {
+        // Ovde stavi tvoju logiku za prikaz sekcija ako postoji.
+        // Ako već postoji u script.js, koristi je. Ako ne, ovo je primer:
+        document.querySelectorAll('section').forEach(s => s.style.display = 'none');
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    // Kad se klikne na dugme "back" ili "forward"
+    window.addEventListener('popstate', function (e) {
+        if (e.state && e.state.section) {
+            showSection(e.state.section);
+        } else {
+            // Vrati se na početnu (front-section)
+            document.querySelectorAll('section').forEach(s => s.style.display = 'none');
+            document.querySelector('.front-section').style.display = 'block';
+        }
+    });
+
+    // Ako korisnik direktno dođe sa hash-om u URL-u (npr. #about)
+    if (location.hash) {
+        const initialSection = location.hash.substring(1);
+        showSection(initialSection);
+    }
+});
+</script>
 		
 	</body>
 	
